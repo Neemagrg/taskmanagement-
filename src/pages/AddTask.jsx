@@ -18,8 +18,7 @@ function AddTask() {
         due_date: "",
     });
 
-    const [error, setError] =
-        useState("");
+    const [error, setError] = useState("");
 
     const handleChange = (e) => {
 
@@ -41,8 +40,7 @@ function AddTask() {
             return;
         }
 
-        const allTasks =
-            JSON.parse(localStorage.getItem("tasks")) || [];
+        const allTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
         const newTask = {
             id: Date.now(),
@@ -66,10 +64,7 @@ function AddTask() {
 
         allTasks.push(newTask);
 
-        localStorage.setItem(
-            "tasks",
-            JSON.stringify(allTasks)
-        );
+        localStorage.setItem( "tasks", JSON.stringify(allTasks) );
 
         navigate("/tasks");
     };
@@ -79,9 +74,7 @@ function AddTask() {
 
             <div className="form-container">
 
-                <h1>
-                    Add New Task
-                </h1>
+                <h1> Add New Task </h1>
 
                 {error && (
                     <div className="error">
@@ -94,9 +87,7 @@ function AddTask() {
                     className="task-form"
                 >
 
-                    <label>
-                        Task Title
-                    </label>
+                    <label> Task Title </label>
 
                     <input
                         type="text"
@@ -107,9 +98,7 @@ function AddTask() {
                         required
                     />
 
-                    <label>
-                        Description
-                    </label>
+                    <label> Description </label>
 
                     <textarea
                         name="description"
@@ -119,9 +108,7 @@ function AddTask() {
                         rows="5"
                     />
 
-                    <label>
-                        Category
-                    </label>
+                    <label> Category </label>
 
                     <input
                         type="text"
@@ -131,9 +118,7 @@ function AddTask() {
                         placeholder="e.g. Study, Work, Personal"
                     />
 
-                    <label>
-                        Priority
-                    </label>
+                    <label> Priority </label>
 
                     <select
                         name="priority"
@@ -141,23 +126,15 @@ function AddTask() {
                         onChange={handleChange}
                     >
 
-                        <option value="Low">
-                            Low
-                        </option>
+                        <option value="Low"> Low </option>
 
-                        <option value="Medium">
-                            Medium
-                        </option>
+                        <option value="Medium"> Medium </option>
 
-                        <option value="High">
-                            High
-                        </option>
+                        <option value="High"> High </option>
 
                     </select>
 
-                    <label>
-                        Status
-                    </label>
+                    <label> Status </label>
 
                     <select
                         name="status"
