@@ -142,23 +142,15 @@ function AddTask() {
                         onChange={handleChange}
                     >
 
-                        <option value="Pending">
-                            Pending
-                        </option>
+                        <option value="Pending"> Pending </option>
 
-                        <option value="In Progress">
-                            In Progress
-                        </option>
+                        <option value="In Progress"> In Progress </option>
 
-                        <option value="Completed">
-                            Completed
-                        </option>
+                        <option value="Completed"> Completed </option>
 
                     </select>
 
-                    <label>
-                        Due Date
-                    </label>
+                    <label> Due Date </label>
 
                     <input
                         type="date"
@@ -171,8 +163,7 @@ function AddTask() {
 
                         <button
                             type="submit"
-                            className="primary-btn"
-                        >
+                            className="primary-btn">
                             Create Task
                         </button>
 
