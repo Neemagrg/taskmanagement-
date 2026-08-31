@@ -44,21 +44,13 @@ function AddTask() {
 
         const newTask = {
             id: Date.now(),
-
             userId: user.id,
-
             title: form.title,
-
             description: form.description,
-
             category: form.category,
-
             priority: form.priority,
-
             status: form.status,
-
             due_date: form.due_date,
-
             createdAt: new Date().toISOString(),
         };
 
@@ -88,7 +80,6 @@ function AddTask() {
                 >
 
                     <label> Task Title </label>
-
                     <input
                         type="text"
                         name="title"
@@ -99,7 +90,6 @@ function AddTask() {
                     />
 
                     <label> Description </label>
-
                     <textarea
                         name="description"
                         value={form.description}
@@ -109,7 +99,6 @@ function AddTask() {
                     />
 
                     <label> Category </label>
-
                     <input
                         type="text"
                         name="category"
@@ -119,39 +108,28 @@ function AddTask() {
                     />
 
                     <label> Priority </label>
-
                     <select
                         name="priority"
                         value={form.priority}
                         onChange={handleChange}
                     >
-
                         <option value="Low"> Low </option>
-
                         <option value="Medium"> Medium </option>
-
                         <option value="High"> High </option>
-
                     </select>
 
                     <label> Status </label>
-
                     <select
                         name="status"
                         value={form.status}
                         onChange={handleChange}
                     >
-
                         <option value="Pending"> Pending </option>
-
                         <option value="In Progress"> In Progress </option>
-
                         <option value="Completed"> Completed </option>
-
                     </select>
 
                     <label> Due Date </label>
-
                     <input
                         type="date"
                         name="due_date"
