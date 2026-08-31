@@ -22,35 +22,21 @@ function Navbar() {
 
             <div className="nav-container">
 
-                <Link
-                    to="/"
-                    className="logo"
-                >
-                    Task Manager
-                </Link>
+                <Link to="/" className="logo"> Task Manager </Link>
 
                 <div className="nav-links">
 
-                    <Link to="/">
-                        Dashboard
-                    </Link>
+                    <Link to="/"> Dashboard </Link>
 
-                    <Link to="/tasks">
-                        Tasks
-                    </Link>
+                    <Link to="/tasks"> Tasks </Link>
 
-                    <Link to="/tasks/add">
-                        Add Task
-                    </Link>
+                    <Link to="/tasks/add"> Add Task </Link>
 
-                    <span className="username">
-                        {user?.name}
-                    </span>
+                    <span className="username"> {user?.name} </span>
 
                     <button
                         onClick={logout}
-                        className="logout-btn"
-                    >
+                        className="logout-btn">
                         Logout
                     </button>
 
